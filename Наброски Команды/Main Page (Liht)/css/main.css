@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Frank+Ruhl+Libre:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 1 - 3 шрифта для сайта */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+  /* Основной шрифт */
+}
+
+a {
+    text-decoration: none;
+    /* Ссылки без подчеркивания */
+}
+
+img {
+    max-width: 100%;
+    /* Чтобы фото корректно отображались */
+}
+
+.wrapper {
+    background-image: linear-gradient( 109.6deg,  rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+    width: 100%;
+    /* Фон сайта */
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    /* По центру */
+}
+
+header {
+    padding: 50px 0;
+    /* Отступы */
+}
+
+header .logo, footer .blocks .logo {
+    text-transform: uppercase; 
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+    /* Навигация */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #1b0109b0;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+    /* Полоска под "Главная" */
+}
+
+header nav ul li a {
+    color: #fff;
+    /* Цвет ссылок */
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+border-bottom: 5px solid #920731b0;
+/* Цвет обводки для ссылок */
+}
+
+header nav ul li.btn a, .email .block button {
+    background: #920731b0;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+    /* Фон кнопки + скругления */
+}
+
+header nav ul li.btn a:hover, .email .block button:hover {
+    background: #1b0109b0;
+    /* Цвет наведения на кнопку */
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 600px;
+    padding-top: 90px;
+    /* Описание около тетради */
+}
+
+.hero--info h2 {
+    color: #920731b0;
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600px;
+}
+
+.hero--info p {
+    font-weight: 600px;
+    line-height: 200%;
+    margin: 5px;
+}
+
+.hero--info .btn {
+    background: #920731b0;
+    color: #fff;
+    border-radius: 60px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 19px;
+    margin: 15px;
+    /* Кнопка ниже описание */
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /* Эффект для кнопки */
+}
+
+.hero img {
+    position: absolute;
+    top: -80px;
+    right: 0;
+    /* Фото для описания */
+}
+
+/* Секция с приложениями */
+
+.trending {
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all {
+    color: #fff;
+    background: rgb(37, 37, 37);
+    border-radius: 5px;
+    padding: 20px 40px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+    /* Кнопка "Узнать" */
+}
+
+.trending .see-all:hover {
+    transform: scale(1.2);
+}
+
+.trending .Application {
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    padding: 50px 0;
+    /* Расположение фоток приложух */
+}
+
+.trending .Application span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    /* Расположение названий приложух */
+}
+
+.trending .Application span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+    /* Расположение "Recommend" */
+}
+
+.big-text {
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+
+    /* Текст после приложений */
+}
+
+/* Баннер(фото) и его текст */ 
+
+.banner {
+    padding: 80px 0;
+}
+
+.banner h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    line-height: 170%;
+    margin-bottom: 30px;
+    width: 550px;
+}
+
+.banner img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Секция с изображением */
+
+.features {
+    background: url(/img/sky.svg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 80px;
+}
+
+.features h3, .features p {
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.features .info .block {
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+.features .info .block img {
+    margin-bottom: 15px;
+}
+
+/* Нижняя шапка */
+.email {
+    padding-bottom: 120px;
+}
+
+.email h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.email .block {
+    background: #2b2c2c;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.email .block p {
+    width: 500;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 380px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding: 20px 30px;
+    color: aquamarine;
+    position: relative;
+    right: -105px;
+    z-index: 1;
+    padding-right: 120px;
+}
+
+.email .block input::placeholder {
+    color: #898989;
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 13px 12px;
+    position: relative;
+    z-index: 2;
+    color:#fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Шапка(Footer) */
+footer {
+    background: #08617a;
+    padding: 50px 0;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+
+footer .blocks h4 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #000000;
+}
+
+footer > p {
+    text-align: center;
+}
+
